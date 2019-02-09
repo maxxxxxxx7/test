@@ -45,10 +45,23 @@
                                     </select>
                                 </span>
                             </p>
-                            <label class="label" v-model="searchCity">City*</label>
+
+                            <label class="label">Your car type*</label>
+                            <p class="control">
+                                <span class="select">
+                                    <select v-model="searchCity">
+                                        <option value="0" selected="" disabled="">Select your city</option>
+                                        <option value="london">london</option>
+                                        <option value="WA">WA</option>
+                                        <option value="bangalore">bangalore</option>
+                                        
+                                    </select>
+                                </span>
+                            </p>
+                            <!-- <label class="label" v-model="searchCity">City*</label>
                             <p class="control">
                                 <input class="input" type="text" placeholder="Ex: Bangalore" v-model="searchCity">
-                            </p>
+                            </p> -->
                             <div class="control is-grouped">
                                 <p class="control">
                                     <a class="button is-primary" v-on:click="search" v-bind:class="{ 'is-loading': loading}">Search</a>
@@ -85,7 +98,7 @@
                 </div>
             </div>
         </div>
-        iv>
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
