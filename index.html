@@ -29,11 +29,11 @@
                 <div class="column is-full-mobile is-half-tablet is-one-third-desktop" style="display: block;margin:auto">
                     <div class="box">
                         <form v-on:submit.prevent="search">
-                            <label class="label">Blood Group*</label>
+                            <label class="label">Your car type*</label>
                             <p class="control">
                                 <span class="select">
                                     <select v-model="searchGroup">
-                                        <option value="0" selected="" disabled="">Select a Blood group</option>
+                                        <option value="0" selected="" disabled="">Select your car</option>
                                         <option value="A+">A+</option>
                                         <option value="A-">A-</option>
                                         <option value="O+">O+</option>
@@ -45,7 +45,7 @@
                                     </select>
                                 </span>
                             </p>
-                            <label class="label" v-model="searchCity">City (optional)</label>
+                            <label class="label" v-model="searchCity">City*</label>
                             <p class="control">
                                 <input class="input" type="text" placeholder="Ex: Bangalore" v-model="searchCity">
                             </p>
@@ -53,9 +53,7 @@
                                 <p class="control">
                                     <a class="button is-primary" v-on:click="search" v-bind:class="{ 'is-loading': loading}">Search</a>
                                 </p>
-                                <p class="control">
-                                    <a class="button is-primary" v-on:click="addBlood = true">Donate my blood</a>
-                                </p>
+                                
                             </div>
                         </form>
                     </div>
