@@ -29,25 +29,29 @@
                 <div class="column is-full-mobile is-half-tablet is-one-third-desktop" style="display: block;margin:auto">
                     <div class="box">
                         <form v-on:submit.prevent="search">
-                            <label class="label">Blood Group*</label>
+                            <label class="label">Car type*</label>
                             <p class="control">
                                 <span class="select">
                                     <select v-model="searchGroup">
-                                        <option value="0" selected="" disabled="">Select a Blood group</option>
-                                        <option value="A+">A+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="AB-">AB-</option>
+                                        <option value="0" selected="" disabled="">Select your car</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Tesla">Tesla</option>
+                                        <option value="Skoda">Skoda</option>
+                                        <option value="Mercedes">Mercedes</option>
                                     </select>
                                 </span>
                             </p>
-                            <label class="label" v-model="searchCity">City (optional)</label>
+                            <label class="label" v-model="searchCity">Select your state*</label>
                             <p class="control">
-                                <input class="input" type="text" placeholder="Ex: Bangalore" v-model="searchCity">
+                                <span class="select">
+                                    <select v-model="searchGroup">
+                                        <option value="0" selected="" disabled="">Select your state</option>
+                                        <option value="VIC">VIC</option>
+                                        <option value="NSW">NSW</option>
+                                        <option value="WA">WA</option>
+                                        <option value="SA">SA</option>
+                                    </select>
+                                </span>
                             </p>
                             <div class="control is-grouped">
                                 <p class="control">
@@ -87,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <div class="section" v-if="addBlood">
+        <!--<div class="section" v-if="addBlood">
             <div class="column is-full-mobile is-half-tablet is-one-third-desktop" style="display: block;margin:auto">
                 <div class="box">
                     <form v-on:submit.prevent="donateBlood">
@@ -134,7 +138,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
