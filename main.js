@@ -1,15 +1,9 @@
 var app = new Vue({
     el: '#app',
     data: {
-        addBlood: false,
+        addCar: false,
         donors: [],
         loading: false,
-        donating: false,
-        donorName: "",
-        donorPhone: "",
-        donorCity: "",
-        donorAddress: "",
-        donorGroup: "",
         searchCar: "A+",
         searchState: ""
     },
