@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         addCar: false,
-        donors: [],
+        cars: [],
         loading: false,
         searchCar: "A+",
         searchState: ""
@@ -20,12 +20,12 @@ var app = new Vue({
                 search: searchQuery
             }).then(function (data) {
                 console.log(data);
-                app.donors = data;
+                app.cars = data;
                 app.loading = false;
             },
                 function (err) {
                     console.log(err);
-                    app.donors = [];
+                    app.cars = [];
                     app.loading = false;
                 });
         },
