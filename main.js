@@ -4,7 +4,7 @@ var app = new Vue({
         addCar: false,
         cars: [],
         loading: false,
-        searchCar: "A+",
+        searchCar: "",
         searchState: ""
     },
     methods: {
