@@ -35,32 +35,9 @@ var app = new Vue({
                     app.loading = false;
                 });
         },
-        donateBlood: function () {
-            var donorData = {
-                name: app.donorName,
-                phone: app.donorPhone,
-                city: app.donorCity,
-                address: app.donorAddress,
-                group: app.donorGroup
-            };
-            app.donating = true;
-            Sheetsu.write("https://sheetsu.com/apis/v1.0su/a4d7192e71fd", donorData, {
-            }).then(function (data) {
-                console.log(data);
-                app.donors.push = data;
-                app.donorName = "";
-                app.donorPhone = "";
-                app.donorCity = "";
-                app.donorAddress = "";
-                app.donorGroup = "";
-                app.donating = false;
-                alert("Thank you for submitting your details.")
-            },
-                function (err) {
-                    console.log(err);
-                    app.donating = false;
-                });
-        }
+        
+         
+        
     }
 
 })
