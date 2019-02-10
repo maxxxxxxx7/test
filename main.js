@@ -11,7 +11,7 @@ var app = new Vue({
         donorAddress: "",
         donorGroup: "",
         searchGroup: "A+",
-        searchCity: ""
+        searchState: ""
     },
     methods: {
         search: function () {
@@ -19,8 +19,8 @@ var app = new Vue({
             var searchQuery = {
                 group: encodeURIComponent(app.searchGroup)
             };
-            if (app.searchCity) {
-                searchQuery.city = app.searchCity;
+            if (app.searchState) {
+                searchQuery.city = app.searchState;
             };
             Sheetsu.read("https://sheetsu.com/apis/v1.0su/a4d7192e71fd", {
                 search: searchQuery

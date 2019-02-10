@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Blood Donor</title>
+    <title>Openpay auto search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -46,8 +46,8 @@
                             <label class="label">Your car type*</label>
                             <p class="control">
                                 <span class="select">
-                                    <select v-model="searchCity">
-                                        <option value="0" selected="" disabled="">Select your city</option>
+                                    <select v-model="searchState">
+                                        <option value="0" selected="" disabled="">Select your state</option>
                                         <option value="london">london</option>
                                         <option value="WA">WA</option>
                                         <option value="SA">SA</option>
@@ -72,25 +72,25 @@
             <div class="columns is-multiline">
                 <div class="column is-full-mobile is-half-tablet is-one-third-desktop" v-for="donor in donors">
                     <div class="card" style="padding:15px;border-top:solid 1px #00D1B2;margin-top:20px">
-                        <p style="font-weight: bold">{{donor.name}}</p>
+                        <p style="font-weight: bold">{{donor.groupName}}</p>
                         <p style="padding-top:10px;padding-bottom:5px">
                             <span class="icon">
                                 <i class="ion-ios-telephone-outline"></i>
                             </span>
-                            <span>{{donor.phone}}</span>
+                            <span>{{donor.groupPhone}}</span>
                         </p>
                         <p style="padding-top:5px;padding-bottom:5px">
                             <span class="icon">
                                 <i class="ion-ios-location-outline"></i>
                             </span>
-                            <span>{{donor.address}}</span>
+                            <span>{{donor.groupAddress}}</span>
                         </p>
-                        <p style="padding-top:5px;padding-bottom:5px">
+                        <!-- <p style="padding-top:5px;padding-bottom:5px">
                             <span class="icon">
                                 <i class="ion-ios-pulse-strong"></i>
                             </span>
                             <span>{{donor.group}}</span>
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
