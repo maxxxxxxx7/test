@@ -8,7 +8,7 @@ var app = new Vue({
         searchState: ""
     },
     methods: {
-        search: function () {
+        search: function (carsLike) {
             app.loading = true;
             var searchQuery = {
                 car: encodeURIComponent(app.searchCar)
@@ -20,7 +20,22 @@ var app = new Vue({
                 search: searchQuery
             }).then(function (data) {
                 console.log(data);
-                app.cars = data;
+
+                if (carsLike) {
+                    var cars = [];
+
+                    for (var i = 0, n = data.length; i < n; i++) {
+                        if (data[i].car.indexOf(carsLike)) {
+                            cars.push(data[i]);
+                        }
+                    }
+
+                    app.cars = cars;
+                }
+                else {
+                    app.cars = data;
+                }
+
                 app.loading = false;
             },
                 function (err) {
