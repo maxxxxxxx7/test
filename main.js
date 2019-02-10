@@ -20,7 +20,7 @@ var app = new Vue({
                 car: encodeURIComponent(app.searchCar)
             };
             if (app.searchState) {
-                searchQuery.city = app.searchState;
+                searchQuery.state = app.searchState;
             };
             Sheetsu.read("https://sheetsu.com/apis/v1.0su/a4d7192e71fd", {
                 search: searchQuery
