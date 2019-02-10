@@ -10,14 +10,14 @@ var app = new Vue({
         donorCity: "",
         donorAddress: "",
         donorGroup: "",
-        searchGroup: "A+",
+        searchCar: "A+",
         searchState: ""
     },
     methods: {
         search: function () {
             app.loading = true;
             var searchQuery = {
-                group: encodeURIComponent(app.searchGroup)
+                car: encodeURIComponent(app.searchCar)
             };
             if (app.searchState) {
                 searchQuery.city = app.searchState;
