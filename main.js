@@ -11,7 +11,7 @@ var app = new Vue({
         search: function (carsLike) {
             app.loading = true;
             var searchQuery = {
-                car: encodeURIComponent(app.searchCar)
+                car: encodeURIComponent('*' + app.searchCar + '*')
             };
             if (app.searchState) {
                 searchQuery.state = app.searchState;
@@ -21,20 +21,20 @@ var app = new Vue({
             }).then(function (data) {
                 console.log(data);
 
-                if (carsLike) {
+                /*if (carsLike) {
                     var cars = [];
 
                     for (var i = 0, n = data.length; i < n; i++) {
-                        if (data[i].car.indexOf(carsLike)) {
+                        if (data[i].car.indexOf(carsLike) >= 0) {
                             cars.push(data[i]);
                         }
                     }
 
                     app.cars = cars;
                 }
-                else {
+                else {*/
                     app.cars = data;
-                }
+                //}
 
                 app.loading = false;
             },
